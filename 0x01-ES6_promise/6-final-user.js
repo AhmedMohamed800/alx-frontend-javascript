@@ -9,10 +9,11 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         if (Object.prototype.hasOwnProperty.call(newEle, 'reason')) {
           const temp = newEle.reason;
           delete newEle.reason;
-          newEle.value = temp;
+          newEle.value = temp.toString();
         }
         return newEle;
       });
+      console.log(newArray);
       return newArray;
     });
 }
