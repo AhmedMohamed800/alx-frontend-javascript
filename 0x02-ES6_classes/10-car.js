@@ -5,8 +5,12 @@ export default class Car {
     this._color = color;
   }
 
+  static get [Symbol.meow]() {
+    return this;
+  }
+
   cloneCar() {
-    const ModelCar = this.constructor;
+    const ModelCar = this.constructor[Symbol.meow];
     return new ModelCar();
   }
 }
