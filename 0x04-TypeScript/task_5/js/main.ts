@@ -1,17 +1,22 @@
-/// <reference path="./crud.d.ts" />
-import { RowID, RowElement } from "./interface";
-import * as CRUD from "./crud";
+interface MajorCredits {
+  credits: number;
+  brand: string;
+}
 
-const row: RowElement = {
-  firstName: "Guillaume",
-  lastName: "Salva",
-};
+interface MinorCredits {
+  credits: number;
+  brand: string;
+}
 
-const newRowId: RowID = CRUD.insertRow(row);
-const updatedRow: RowElement = {
-  firstName: "Guillaume",
-  lastName: "Salva",
-  age: 23,
-};
-CRUD.updateRow(newRowId, updatedRow);
-CRUD.deleteRow(newRowId);
+function sumMajorCredits(
+  subject1: MajorCredits,
+  subject2: MajorCredits
+): number {
+  return subject1.credits + subject2.credits;
+}
+function sumMinorCredits(
+  subject1: MinorCredits,
+  subject2: MinorCredits
+): number {
+  return subject1.credits + subject2.credits;
+}
