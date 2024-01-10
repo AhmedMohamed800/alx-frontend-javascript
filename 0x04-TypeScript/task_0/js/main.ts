@@ -5,21 +5,21 @@ interface Student {
     location: string;
 }
 
-const student_one:Student = {
+const studentOne: Student = {
     firstName: "Dinamow",
     lastName: "Bn Shawerma",
     age: 40 / 2,
     location: "Alxanderia"
 }
 
-const student_two: Student = {
+const studentTwo: Student = {
   firstName: "Noor",
   lastName: "Emad",
   age: 15,
   location: "Cairo",
 };
 
-const studentsList: Array<Student> = [student_one, student_two];
+const studentsList: Array<Student> = [studentOne, studentTwo];
 
 
 // render table
