@@ -23,13 +23,13 @@ const studentsList: Array<Student> = [studentOne, studentTwo];
 
 
 // render table
-const thead = document.createElement('thead');
-const headerRow = document.createElement('tr');
-const table = document.createElement('table');
-const body = document.querySelector('body');
+const thead: HTMLHeadElement = document.createElement('thead');
+const headerRow: HTMLTableRowElement = document.createElement('tr');
+const table: HTMLTableElement = document.createElement("table");
+const body: HTMLBodyElement = document.querySelector('body');
 
 ["firstName", "location"].forEach((key) => {
-  const th = document.createElement("th");
+  const th: HTMLTableCellElement = document.createElement("th");
   th.textContent = key;
   headerRow.appendChild(th);
 });
@@ -39,13 +39,13 @@ thead.appendChild(headerRow);
 table.appendChild(thead);
 
 for (const student of studentsList) {
-    const tr = document.createElement('tr');
+    const tr: HTMLTableRowElement = document.createElement("tr");
 
-    const tdFirstName = document.createElement('td');
+    const tdFirstName: HTMLTableCellElement = document.createElement("td");
     tdFirstName.textContent = student.firstName;
     tr.appendChild(tdFirstName);
 
-    const tdLocation = document.createElement('td');
+    const tdLocation: HTMLTableCellElement = document.createElement("td");
     tdLocation.textContent = student.location;
     tr.appendChild(tdLocation);
 
